@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Syamsi Anugrah | Frontend Developer</title>
+
+    <meta name="description" content="Portfolio premium Syamsi Anugrah - Frontend Developer modern dan profesional.">
+    <meta name="keywords" content="Frontend Developer, Portfolio, Web Developer">
+    <meta name="author" content="Syamsi Anugrah">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="images/anu-logo.png" alt="ANU Logo">
+            </div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <img src="images/profile.jpg" alt="Profile Syamsi" class="profile-img">
+            <img src="images/anu-logo.png" alt="ANU Logo" class="hero-logo">
+            <h1>Frontend Developer</h1>
+            <p>Membangun website modern, elegan, dan berperforma tinggi.</p>
+            <a href="#contact" class="btn">Hire Me</a>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>Saya fokus pada UI modern, animasi smooth, dan pengalaman pengguna premium.</p>
+    </section>
+
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+        <div class="skill-grid">
+            <div class="card">HTML Semantic</div>
+            <div class="card">CSS Animation</div>
+            <div class="card">JavaScript Modern</div>
+            <div class="card">React & Next.js</div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Me</h2>
+
+        <form id="contactForm" novalidate>
+
+            <div class="form-group">
+                <input type="text" id="name" placeholder="Nama Lengkap">
+                <small class="error"></small>
+            </div>
+
+            <div class="form-group">
+                <input type="email" id="email" placeholder="Email">
+                <small class="error"></small>
+            </div>
+
+            <div class="form-group">
+                <select id="service">
+                    <option value="">Pilih Layanan</option>
+                    <option value="website">Website</option>
+                    <option value="landing">Landing Page</option>
+                    <option value="uiux">UI Design</option>
+                </select>
+                <small class="error"></small>
+            </div>
+
+            <div class="form-group">
+                <textarea id="message" placeholder="Pesan Anda"></textarea>
+                <small class="error"></small>
+            </div>
+
+            <button type="submit" class="btn full">Kirim Pesan</button>
+
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2026 Syamsi Anugrah. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
