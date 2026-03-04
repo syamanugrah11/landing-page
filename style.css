@@ -54,6 +54,52 @@ nav a:hover {
     background: radial-gradient(circle at top, #222, #000);
 }
 
+.hero h1 {
+    font-size: 3rem;
+    background: linear-gradient(to right, gold, white);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.logo img {
+    height: 100px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-name {
+    font-weight: 700;
+    font-size: 18px;
+    background: linear-gradient(to right, gold, white);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+}
+
+.hero-logo {
+    width: 180px;
+    margin-bottom: 20px;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        filter: drop-shadow(0 0 5px gold);
+    }
+
+    to {
+        filter: drop-shadow(0 0 20px gold);
+    }
+}
+
 .profile-img {
     width: 160px;
     height: 160px;
@@ -68,15 +114,6 @@ nav a:hover {
 .profile-img:hover {
     transform: scale(1.05);
     box-shadow: 0 15px 40px rgba(255, 215, 0, 0.7);
-}
-
-.hero h1 {
-    font-size: 3rem;
-    background: linear-gradient(to right, gold, white);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
 }
 
 .btn {
@@ -190,26 +227,6 @@ footer {
     }
 }
 
-.logo img {
-    height: 40px;
-}
-
-.hero-logo {
-    width: 180px;
-    margin-bottom: 20px;
-    animation: glow 2s infinite alternate;
-}
-
-@keyframes glow {
-    from {
-        filter: drop-shadow(0 0 5px gold);
-    }
-
-    to {
-        filter: drop-shadow(0 0 20px gold);
-    }
-}
-
 @media(max-width:768px) {
 
     .container {
@@ -244,6 +261,94 @@ footer {
 
     .section {
         padding: 100px 20px;
+    }
+
+    @media(max-width:768px) {
+        .logo {
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+    }
+
+    /* ================= POPUP CONTACT ================= */
+
+    .popup-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s;
+        z-index: 999;
+    }
+
+    .popup-overlay.active {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .popup-box {
+        background: #111;
+        padding: 30px;
+        border-radius: 12px;
+        text-align: center;
+        width: 320px;
+        animation: popIn 0.3s ease;
+    }
+
+    .popup-box h3 {
+        margin-bottom: 20px;
+    }
+
+    .popup-buttons button {
+        width: 100%;
+        padding: 12px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+    .popup-wa {
+        background: #25D366;
+        color: white;
+    }
+
+    .popup-wa:hover {
+        background: #1ebe5d;
+    }
+
+    .popup-email {
+        background: #ff4b2b;
+        color: white;
+    }
+
+    .popup-email:hover {
+        background: #e43c1e;
+    }
+
+    .close-popup {
+        margin-top: 10px;
+        font-size: 14px;
+        cursor: pointer;
+        color: #aaa;
+    }
+
+    @keyframes popIn {
+        from {
+            transform: scale(0.8);
+            opacity: 0;
+        }
+
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
     }
 
 }
